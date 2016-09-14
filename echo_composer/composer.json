@@ -1,0 +1,15 @@
+{
+"require": {
+"monolog/monolog": "1.6.*@dev"
+},
+"autoload": {
+	"psr-0": {"Car\\": "src/"},
+	"classmap":[
+		"app/config"
+		],
+		"files":[
+			"helper/helper.php"
+		]
+}
+
+}
