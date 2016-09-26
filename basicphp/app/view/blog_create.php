@@ -19,6 +19,8 @@
 						<textarea name="body" class="form-control" id="blog-body" placeholder="Type something..."></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="delete" class="btn btn-primary">Delete</button>
+
 				</form>
 			</div>
 		</div>

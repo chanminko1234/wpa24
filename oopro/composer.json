@@ -3,10 +3,21 @@
 		"files": [
 			"wpa24/helpers.php"
 		],
+		"psr-4": {
+			"Thiha\\": "wpa24/src"
+		},
 		"classmap": [
 			"app/controller",
 			"wpa24/lib",
-			"wpa24/provider"
+			"wpa24/provider",
+			"wpa24/provider/trait",
+			"wpa24/Log/interface"
 		]
+	},
+	"require": {
+		"league/container": "^2.2",
+		"illuminate/container": "^5.3",
+		"symfony/http-foundation": "^3.1",
+		"jrschumacher/symfony-component-httpfoundation-csvresponse": "^0.0.1"
 	}
 }

@@ -7,22 +7,94 @@ namespace Composer\Autoload;
 class ComposerStaticInit590d4f4299222c60936a538add3ae70f
 {
     public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '1be63435e73c69893c3b9257d0ddcba1' => __DIR__ . '/../..' . '/wpa24/helpers.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Thiha\\' => 6,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+        ),
+        'L' => 
+        array (
+            'League\\Container\\' => 17,
+        ),
+        'I' => 
+        array (
+            'Interop\\Container\\' => 18,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Container\\' => 21,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Thiha\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/wpa24/src',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\HttpFoundation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+            1 => __DIR__ . '/..' . '/jrschumacher/symfony-component-httpfoundation-csvresponse/src',
+        ),
+        'League\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/container/src',
+        ),
+        'Interop\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+        ),
+        'Illuminate\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
+        ),
+        'Illuminate\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'G' => 
+        array (
+            'Goodby\\CSV' => 
+            array (
+                0 => __DIR__ . '/..' . '/goodby/csv/src',
+            ),
+        ),
     );
 
     public static $classMap = array (
         'BlogController' => __DIR__ . '/../..' . '/app/controller/BlogController.php',
         'Config' => __DIR__ . '/../..' . '/wpa24/lib/ConfigReader.php',
         'DB' => __DIR__ . '/../..' . '/wpa24/provider/DBProvider.php',
+        'DBRead' => __DIR__ . '/../..' . '/wpa24/provider/trait/DBRead.php',
+        'DBWrite' => __DIR__ . '/../..' . '/wpa24/provider/trait/DBWrite.php',
         'Helper' => __DIR__ . '/../..' . '/wpa24/lib/Helper.php',
         'HomeController' => __DIR__ . '/../..' . '/app/controller/HomeController.php',
+        'LogInterface' => __DIR__ . '/../..' . '/wpa24/Log/interface/LogInterface.php',
         'PageController' => __DIR__ . '/../..' . '/app/controller/PageController.php',
+        'TraitSingleton' => __DIR__ . '/../..' . '/wpa24/provider/trait/TraitSingleton.php',
         'View' => __DIR__ . '/../..' . '/wpa24/provider/ViewProvider.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit590d4f4299222c60936a538add3ae70f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit590d4f4299222c60936a538add3ae70f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit590d4f4299222c60936a538add3ae70f::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit590d4f4299222c60936a538add3ae70f::$classMap;
 
         }, null, ClassLoader::class);

@@ -9,14 +9,16 @@ function HomeController() {
 	];
 	echo get_view('home', $data);
 }
+// $action = null passing blog
 function BlogController($action = null) {
 	if($action == null) {
 		$blogs = db_select('blogs', ['title', 'body']);
 	
 		$data = [
 			'site_title'	=> get_config('app.site_title'),
-			'blogs'		=> $blogs 
+			'blogs'			=> $blogs 
 		];
+
 		echo get_view('home', $data);	
 	} else if($action == "create") {
 		echo get_view('blog_create');

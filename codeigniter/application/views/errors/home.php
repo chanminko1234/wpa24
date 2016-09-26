@@ -6,11 +6,9 @@
 </head>
 <body>
 	<h1><?php echo $title; ?></h1>
-	<?php foreach($students as $student) { ?>
+	<?php foreach ($students as $student) { ?>
 		<h2><?php echo $student->name; ?></h2>
-	<?php } ?>	
-		
-	
+	<?php } ?>
 </body>
 </html>
 

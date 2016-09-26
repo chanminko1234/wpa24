@@ -1,3 +1,4 @@
+
 <?php 
 function db_select($table_name, $fields = null) {
 	$servername = get_config('database.hostname');
@@ -31,19 +32,25 @@ function db_insert($table_name, $fields) {
 	$i_keys = implode(",", $keys);
 	$i_values = implode('","', $values);
 	$sql .= $i_keys . ') VALUES ("' . $i_values . '")';
+
 	$servername = get_config('database.hostname');
 	$username = get_config('database.username');
 	$password = get_config('database.password');
 	$dbname = get_config('database.dbname');
+
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
+
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
 	}
+
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
+
 	$conn->close();
+
 }
 ?>
