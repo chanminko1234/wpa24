@@ -14,7 +14,7 @@ class StaticChain {
     public static function GateKeeper() {
         if(!self::$_instance instanceof StaticChain){
             self::$_instance = new StaticChain();
-            echo "Object Created! <bt />";
+            echo "Object Created! <br />";
         }
         return self::$_instance;
     }
@@ -30,44 +30,10 @@ class StaticChain {
         echo "Yay !!! Four! <br />";
     }
 }
-
 StaticChain::GateKeeper()->two()->three()->four();
 StaticChain::GateKeeper()->three()->four();
 StaticChain::GateKeeper()->four();
 StaticChain::GateKeeper()->two()->three()->four();
 StaticChain::GateKeeper()->three()->four();
 StaticChain::GateKeeper()->four();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

@@ -10,7 +10,8 @@ class Pages extends CI_Controller {
 			'title'=> 'Myanmar Links',
 			'students'=>$query->result()
 		];
-		$this->load->view( 'home' , $data);
+		$this->load->view('home', $data);
+
 	}
 }
 

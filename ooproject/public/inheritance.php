@@ -29,7 +29,10 @@ class Dog extends Animal {
 
 $dog = new Dog("Aung Net");
 echo $dog->name;
+echo "<br />";
 $dog->eat();
+echo "<br />";
+$dog->bark();
 
 
 

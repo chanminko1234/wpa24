@@ -39,7 +39,7 @@ class Dog {
 	}
 }
 Dog::warning();
-Dog::dangerous(); 
+Dog::dangerous();
 die();
 $dog = new Dog("Aung Net");
 $dog ->bark();
@@ -50,23 +50,4 @@ $dog->dance("CRAZY", 50);
 var_dump($dog->getSorryForleg());
 echo"<br />";
 $dog2 = new Dog("Puppy");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

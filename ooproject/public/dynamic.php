@@ -1,4 +1,3 @@
-
 <?php
 /* Method Chain */
 class DynamicChain {
@@ -25,8 +24,8 @@ class DynamicChain {
 }
 $payment = new DynamicChain();
 $payment->GateKeeper()
-        ->PyarTar()
-        ->Manager()
-        ->CEO()
-        ->TotalPayment();
+                  ->PyarTar()
+                  ->Manager()
+                  ->CEO()
+                  ->TotalPayment();
 ?>

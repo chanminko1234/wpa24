@@ -1,4 +1,3 @@
-
 <?php 
 function db_select($table_name, $fields = null) {
 	$servername = get_config('database.hostname');
